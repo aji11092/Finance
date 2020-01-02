@@ -1,8 +1,19 @@
-/**
+/*
+ * FileName: LRSUploader.java
+ * Author  : Ajimon
  * 
+ * Using JRE 1.8.0_211
+ * 
+ * Copyright(c) 2020 Finance.
+ * Duplication or distribution of this code in part or in whole by any media
+ * without the express written permission of Finance or its agents is
+ * strictly prohibited.
+ *  
+ * REVISION         DATE        NAME       DESCRIPTION
+ * 511.101       2 Jan, 2020       Ajimon      Initial Code  
  */
-package com.finance.util;
 
+package com.finance.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,12 +25,20 @@ import java.net.URL;
 import java.util.Base64;
 
 /**
- * @author developer
- *
+ * The Class LRSUploader.
  */
-
 public class LRSUploader {
 
+    /**
+     * Upload.
+     *
+     * @param mailId the mail id
+     * @param name the name
+     * @param verb the verb
+     * @param verbId the verb id
+     * @param objectId the object id
+     * @param definitionName the definition name
+     */
     public static void upload(String mailId, String name, String verb, String verbId, String objectId,
         String definitionName) {
         try {
@@ -39,14 +58,13 @@ public class LRSUploader {
             myURLConnection.setUseCaches(false);
             myURLConnection.setDoInput(true);
             myURLConnection.setDoOutput(true);
-            String input = "{\"actor\":{\"mbox\":".concat("\"" +"mailto:"+mailId + "\"").concat(",")
+            String input = "{\"actor\":{\"mbox\":".concat("\"" + "mailto:" + mailId + "\"").concat(",")
                 .concat("\"name\":".concat("\"" + name + "\"")).concat("}").concat(",").concat(
                     "\"verb\":".concat("{\"display\":".concat("{\"en-GB\":").concat("\"" + verb + "\"}")).concat(",")
                         .concat("\"id\":".concat("\"" + verbId + "\"}").concat(",")
                             .concat("\"object\":".concat("{\"id\":").concat("\"" + objectId + "\"").concat(",")
-                                .concat("\"definition\":").concat("{\"name\":").concat("{\"en-GB\":").concat(
-                                    "\"" + definitionName + "\"")
-                                .concat("}}}}"))));
+                                .concat("\"definition\":").concat("{\"name\":").concat("{\"en-GB\":")
+                                .concat("\"" + definitionName + "\"").concat("}}}}"))));
             System.out.println(input);
             OutputStream os = myURLConnection.getOutputStream();
             os.write(input.getBytes());

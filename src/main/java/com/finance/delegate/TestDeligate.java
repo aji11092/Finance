@@ -19,7 +19,6 @@ import com.finance.common.Response;
 import com.finance.request.entity.TestRequest;
 import java.text.ParseException;
 
-
 /**
  * The Interface TestDeligate.
  */

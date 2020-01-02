@@ -1,37 +1,26 @@
 /*
  * FileName: Test.java
- * Author  : CY0180
+ * Author  : Ajimon
  * 
  * Using JRE 1.8.0_211
  * 
- * Copyright(c) 2019 Cycloides Technologies.
+ * Copyright(c) 2020 Finance.
  * Duplication or distribution of this code in part or in whole by any media
- * without the express written permission of Cycloides Technologies or its agents is
+ * without the express written permission of Finance or its agents is
  * strictly prohibited.
  *  
- * REVISION         DATE            NAME     DESCRIPTION
- * 511.101       21 Sep, 2019       Ajimon      Initial Code  
+ * REVISION         DATE        NAME       DESCRIPTION
+ * 511.101       2 Jan, 2020       Ajimon      Initial Code  
  */
+ 
 package com.finance.model;
 
-import java.util.Date;
-import java.util.List;
 import java.util.UUID;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.GenericGenerator;
 
 
@@ -66,26 +55,56 @@ public class Test {
     @Column(name = "test_description", columnDefinition = "TEXT")
     private String testDescription;
 
+	/**
+	 * Gets the test id.
+	 *
+	 * @return the test id
+	 */
 	public UUID getTestId() {
 		return testId;
 	}
 
+	/**
+	 * Sets the test id.
+	 *
+	 * @param testId the new test id
+	 */
 	public void setTestId(UUID testId) {
 		this.testId = testId;
 	}
 
+	/**
+	 * Gets the name.
+	 *
+	 * @return the name
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * Sets the name.
+	 *
+	 * @param name the new name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * Gets the test description.
+	 *
+	 * @return the test description
+	 */
 	public String getTestDescription() {
 		return testDescription;
 	}
 
+	/**
+	 * Sets the test description.
+	 *
+	 * @param testDescription the new test description
+	 */
 	public void setTestDescription(String testDescription) {
 		this.testDescription = testDescription;
 	}

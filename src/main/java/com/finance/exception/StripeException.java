@@ -1,23 +1,23 @@
 /*
- * FileName: CommonException.java
- * @author Suresh.C
+ * FileName: StripeException.java
+ * Author  : Ajimon
  * 
  * Using JRE 1.8.0_211
  * 
- * Copyright(c) 2019 Cycloides Technologies.
+ * Copyright(c) 2020 Finance.
  * Duplication or distribution of this code in part or in whole by any media
- * without the express written permission of Cycloides Technologies or its agents is
+ * without the express written permission of Finance or its agents is
  * strictly prohibited.
  *  
- * REVISION         DATE            NAME     DESCRIPTION
- * 511.101       21 Sep, 2019       Suresh      Initial Code  
+ * REVISION         DATE        NAME       DESCRIPTION
+ * 511.101       2 Jan, 2020       Ajimon      Initial Code  
  */
+
 package com.finance.exception;
 
 import com.finance.common.ErrorCode;
 import com.finance.util.ParamErrors;
 import java.util.List;
-
 
 /**
  * This class is used to throw custom exceptions.
@@ -64,7 +64,6 @@ public class StripeException extends RuntimeException {
         this.paramErrors = paramErrors;
     }
 
-   
     /**
      * Gets the error code.
      *

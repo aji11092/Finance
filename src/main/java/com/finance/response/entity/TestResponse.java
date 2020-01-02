@@ -1,21 +1,20 @@
 /*
  * FileName: TestResponse.java
- * Author  : CY0180
+ * Author  : Ajimon
  * 
  * Using JRE 1.8.0_211
  * 
- * Copyright(c) 2019 Cycloides Technologies.
+ * Copyright(c) 2020 Finance.
  * Duplication or distribution of this code in part or in whole by any media
- * without the express written permission of Cycloides Technologies or its agents is
+ * without the express written permission of Finance or its agents is
  * strictly prohibited.
  *  
- * REVISION         DATE            NAME     DESCRIPTION
- * 511.101       21 Sep, 2019       Ajimon      Initial Code  
+ * REVISION         DATE        NAME       DESCRIPTION
+ * 511.101       2 Jan, 2020       Ajimon      Initial Code  
  */
+
 package com.finance.response.entity;
 
-import java.util.Date;
-import java.util.List;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
@@ -35,30 +34,58 @@ public class TestResponse {
     @ApiModelProperty(value = "testDescription for the test")
     private String testDescription;
 
-	public String getTestId() {
-		return testId;
-	}
+    /**
+     * Gets the test id.
+     *
+     * @return the test id
+     */
+    public String getTestId() {
+        return testId;
+    }
 
-	public void setTestId(String testId) {
-		this.testId = testId;
-	}
+    /**
+     * Sets the test id.
+     *
+     * @param testId the new test id
+     */
+    public void setTestId(String testId) {
+        this.testId = testId;
+    }
 
-	public String getName() {
-		return name;
-	}
+    /**
+     * Gets the name.
+     *
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    /**
+     * Sets the name.
+     *
+     * @param name the new name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getTestDescription() {
-		return testDescription;
-	}
+    /**
+     * Gets the test description.
+     *
+     * @return the test description
+     */
+    public String getTestDescription() {
+        return testDescription;
+    }
 
-	public void setTestDescription(String testDescription) {
-		this.testDescription = testDescription;
-	}
-
-   
+    /**
+     * Sets the test description.
+     *
+     * @param testDescription the new test description
+     */
+    public void setTestDescription(String testDescription) {
+        this.testDescription = testDescription;
+    }
 
 }

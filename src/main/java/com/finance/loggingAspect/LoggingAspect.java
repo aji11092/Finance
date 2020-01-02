@@ -1,7 +1,20 @@
+/*
+ * FileName: LoggingAspect.java
+ * Author  : Ajimon
+ * 
+ * Using JRE 1.8.0_211
+ * 
+ * Copyright(c) 2020 Finance.
+ * Duplication or distribution of this code in part or in whole by any media
+ * without the express written permission of Finance or its agents is
+ * strictly prohibited.
+ *  
+ * REVISION         DATE        NAME       DESCRIPTION
+ * 511.101       2 Jan, 2020       Ajimon      Initial Code  
+ */
 package com.finance.loggingAspect;
-import java.util.Arrays;
-import java.util.Optional;
 
+import java.util.Arrays;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -12,47 +25,44 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-
 /**
- * Aspect for logging execution of service and repository Spring components.
- * @author Ramesh Fadatare
- *
+ * The Class LoggingAspect.
  */
 @Aspect
 @Component
 public class LoggingAspect {
-	
-	
-/*	
-	public class CoreLogger {
-	    private static final MethodLogger METHOD_LOGGER = Optional.ofNullable(MethodLogger.aspectOf())
-	            .orElse(new MethodLogger());
 
-	    @Around("execution(public * (@com.jcabi.aspects.Loggable *).*(..))"
-	            + " && !execution(String *.toString())"
-	            + " && !execution(int *.hashCode())"
-	            + " && !execution(boolean *.canEqual(Object))"
-	            + " && !execution(boolean *.equals(Object))")
-	    public Object wrapClass(final ProceedingJoinPoint point) throws Throwable {
+    /*	
+    	public class CoreLogger {
+    	    private static final MethodLogger METHOD_LOGGER = Optional.ofNullable(MethodLogger.aspectOf())
+    	            .orElse(new MethodLogger());
+    
+    	    @Around("execution(public * (@com.jcabi.aspects.Loggable *).*(..))"
+    	            + " && !execution(String *.toString())"
+    	            + " && !execution(int *.hashCode())"
+    	            + " && !execution(boolean *.canEqual(Object))"
+    	            + " && !execution(boolean *.equals(Object))")
+    	    public Object wrapClass(final ProceedingJoinPoint point) throws Throwable {
+    
+    	        return METHOD_LOGGER.wrapClass(point);
+    	    }
+    
+    	    @Around("@annotation(com.jcabi.aspects.Loggable)")
+    	    public Object wrapMethod(final ProceedingJoinPoint point) throws Throwable {
+    
+    	        return METHOD_LOGGER.wrapMethod(point);
+    	    }
+    	}*/
 
-	        return METHOD_LOGGER.wrapClass(point);
-	    }
-
-	    @Around("@annotation(com.jcabi.aspects.Loggable)")
-	    public Object wrapMethod(final ProceedingJoinPoint point) throws Throwable {
-
-	        return METHOD_LOGGER.wrapMethod(point);
-	    }
-	}*/
-
+    /** The log. */
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
     /**
      * Pointcut that matches all repositories, services and Web REST endpoints.
      */
-    @Pointcut("within(@org.springframework.stereotype.Repository *)" +
-        " || within(@org.springframework.stereotype.Service *)" +
-        " || within(@org.springframework.web.bind.annotation.RestController *)")
+    @Pointcut("within(@org.springframework.stereotype.Repository *)"
+        + " || within(@org.springframework.stereotype.Service *)"
+        + " || within(@org.springframework.web.bind.annotation.RestController *)")
     public void springBeanPointcut() {
         // Method is empty as this is just a Pointcut, the implementations are in the advices.
     }
@@ -60,9 +70,8 @@ public class LoggingAspect {
     /**
      * Pointcut that matches all Spring beans in the application's main packages.
      */
-    @Pointcut("within(com.learningturf.core..*)" +
-        " || within(com.learningturf.core.service.impl..*)" +
-        " || within(com.learningturf.core.controller..*)")
+    @Pointcut("within(com.learningturf.core..*)" + " || within(com.learningturf.core.service.impl..*)"
+        + " || within(com.learningturf.core.controller..*)")
     public void applicationPackagePointcut() {
         // Method is empty as this is just a Pointcut, the implementations are in the advices.
     }

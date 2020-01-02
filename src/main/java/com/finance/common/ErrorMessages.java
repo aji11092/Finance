@@ -1,33 +1,68 @@
+/*
+ * FileName: ErrorMessages.java
+ * Author  : Ajimon
+ * 
+ * Using JRE 1.8.0_211
+ * 
+ * Copyright(c) 2020 Finance.
+ * Duplication or distribution of this code in part or in whole by any media
+ * without the express written permission of Finance or its agents is
+ * strictly prohibited.
+ *  
+ * REVISION         DATE        NAME       DESCRIPTION
+ * 511.101       2 Jan, 2020       Ajimon      Initial Code  
+ */
 package com.finance.common;
 
 /**
- * @author Suresh.C
- *
+ * The Class ErrorMessages.
  */
-/**
- * This class is used to store all error messages.
- */
-
 public class ErrorMessages {
-	
-	public static final String NO_ENTRY_FOUND = "No entry found";
-	public static final String METHOD_NOT_SUPPORTED = "Method not supported for provided Ids.";
-	public static final String ACCESS_DENIED = "Access Denied";
-	public static final String INVALID_PROFILE = "Requested profile is Invalid or Deleted";
 
-	public static final String INTERNAL_SERVER_ERROR = "Internal server error";
-	public static final String PROFILE_DUPLICATE_ERROR = "A profile already exist in this name";
-	public static final String PAGE_DUPLICATE_ERROR = "A page already exist in this name for this profile";
-	public static final String ASSET_DUPLICATE_ERROR="Asset with same asset id already exists";
-	public static final String ASSET_ID_MISSING_MESSAG="Given asset id is null";
-	public static final String INVALID_PARAMETERS="INVALID_PARAMETERS";
-	public static final String INVALID_REQUEST = "Invalid Request Parameter";
-	public static final String CATEGORY_ALREADY_ASSIGNED = "This Category already assgined to some report";
+    /** The Constant NO_ENTRY_FOUND. */
+    public static final String NO_ENTRY_FOUND = "No entry found";
 
-	public static final String STRIPE_PARAMETERS = "STRIPE_PARAMETERS";
+    /** The Constant METHOD_NOT_SUPPORTED. */
+    public static final String METHOD_NOT_SUPPORTED = "Method not supported for provided Ids.";
 
-	private ErrorMessages(){
+    /** The Constant ACCESS_DENIED. */
+    public static final String ACCESS_DENIED = "Access Denied";
 
-	}
+    /** The Constant INVALID_PROFILE. */
+    public static final String INVALID_PROFILE = "Requested profile is Invalid or Deleted";
+
+    /** The Constant INTERNAL_SERVER_ERROR. */
+    public static final String INTERNAL_SERVER_ERROR = "Internal server error";
+
+    /** The Constant PROFILE_DUPLICATE_ERROR. */
+    public static final String PROFILE_DUPLICATE_ERROR = "A profile already exist in this name";
+
+    /** The Constant PAGE_DUPLICATE_ERROR. */
+    public static final String PAGE_DUPLICATE_ERROR = "A page already exist in this name for this profile";
+
+    /** The Constant ASSET_DUPLICATE_ERROR. */
+    public static final String ASSET_DUPLICATE_ERROR = "Asset with same asset id already exists";
+
+    /** The Constant ASSET_ID_MISSING_MESSAG. */
+    public static final String ASSET_ID_MISSING_MESSAG = "Given asset id is null";
+
+    /** The Constant INVALID_PARAMETERS. */
+    public static final String INVALID_PARAMETERS = "INVALID_PARAMETERS";
+
+    /** The Constant INVALID_REQUEST. */
+    public static final String INVALID_REQUEST = "Invalid Request Parameter";
+
+    /** The Constant CATEGORY_ALREADY_ASSIGNED. */
+    public static final String CATEGORY_ALREADY_ASSIGNED = "This Category already assgined to some report";
+
+    /** The Constant STRIPE_PARAMETERS. */
+    public static final String STRIPE_PARAMETERS = "STRIPE_PARAMETERS";
+
+    /**
+     * Instantiates a new error messages.
+     */
+    private ErrorMessages() {
+
+    }
 
 }

@@ -1,30 +1,28 @@
 /*
  * FileName: TestConverterHelper.java
- * Author  : CY0180
+ * Author  : Ajimon
  * 
  * Using JRE 1.8.0_211
  * 
- * Copyright(c) 2019 Cycloides Technologies.
+ * Copyright(c) 2020 Finance.
  * Duplication or distribution of this code in part or in whole by any media
- * without the express written permission of Cycloides Technologies or its agents is
+ * without the express written permission of Finance or its agents is
  * strictly prohibited.
  *  
- * REVISION         DATE            NAME     DESCRIPTION
- * 511.101       21 Sep, 2019       Ajimon      Initial Code 
- * 511.102       21 Sep, 2019       Ajimon      changed coding standards 
+ * REVISION         DATE        NAME       DESCRIPTION
+ * 511.101       2 Jan, 2020       Ajimon      Initial Code  
  */
+
 package com.finance.helper;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import com.finance.model.Test;
 import com.finance.request.entity.TestRequest;
 import com.finance.response.entity.TestResponse;
 import com.finance.response.entity.TestResponseList;
-import com.google.common.base.Strings;
 
 /**
  * The Class TestConverterHelper.
@@ -43,7 +41,7 @@ public class TestConverterHelper {
      */
     public static Test getTestRequest(TestRequest testRequest) throws ParseException {
         Test test = new Test();
-       
+
         return test;
     }
 
@@ -55,8 +53,6 @@ public class TestConverterHelper {
      */
     public static TestResponse getTestFromEntity(Test test) {
         TestResponse testResponse = new TestResponse();
-
-      
 
         return testResponse;
     }
@@ -81,7 +77,5 @@ public class TestConverterHelper {
         testResponseList.setTotalCount(totalCount);
         return testResponseList;
     }
-
-   
 
 }
